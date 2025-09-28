@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-spelling-bot
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: OMDB_API_KEY
+        sync: false
